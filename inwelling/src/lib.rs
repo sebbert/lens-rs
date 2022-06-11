@@ -316,7 +316,7 @@ pub fn inwelling( Opts{ watch_manifest, watch_rs_files, dump_rs_paths }: Opts ) 
                 if let Ok( out_dir ) = env::var("OUT_DIR") {
                     let out_dir = Path::new( &out_dir );
                     let ancestors = out_dir.ancestors();
-                    if let Some( manifest_dir ) = ancestors.skip(5).next() {
+                    if let Some( manifest_dir ) = ancestors.skip_while(|path| !path.ends_with("target")).skip(1).next() {
                         return manifest_dir.join( "Cargo.toml" );
                     }
                 }
