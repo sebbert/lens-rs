@@ -3,8 +3,12 @@ members = [
     "lens-rs",
     "lens-rs_generator",
     "lens-rs_derive",
-    "lens-rs_test"
+    "lens-rs_test",
+    "inwelling",
+    "pals",
 ]
 
 [patch.crates-io]
 lens-rs = { path = "lens-rs" }
+inwelling = { path = "./inwelling" }
+pals = { path = "./pals" }
