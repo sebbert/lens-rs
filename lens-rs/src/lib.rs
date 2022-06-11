@@ -207,7 +207,7 @@ pub mod optics;
 pub mod traits;
 
 /// definition of `DynLens`, `DynPrism`, `DynTraverse` and `DynReview`.
-pub mod dyn_optics;
+// pub mod dyn_optics;
 
 pub use traits::{lens::*, prism::*, review::*, traversal::*};
 
